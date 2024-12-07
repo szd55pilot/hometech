@@ -1,0 +1,223 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Overlay to make the background image fainter */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay with some transparency */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+/* Header */
+header {
+    background: #008cba;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Services Section */
+#services {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the service list */
+    padding: 20px;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px; /* Set a max width for the service list */
+    width: 100%; /* Make sure it's responsive */
+    margin: 0 auto; /* Centers the list */
+}
+
+.service-list li {
+    margin: 10px 0;
+}
+
+.service-list li a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none; /* Remove underline from links */
+    padding: 15px;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centers the text */
+}
+
+.service-list li a:hover {
+    background-color: #008cba;
+    color: white;
+    border-color: #008cba;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Service Description */
+#service-description {
+    margin-top: 20px;
+}
+
+#service-description h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#service-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px; /* Limit width of description for better readability */
+    margin: 0 auto;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto; /* Centers the form on the page */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005f73;
+}
+
+/* About Page and Sub-Page Boxes */
+#about, .sub-page {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background to enhance text readability */
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Specific Styling for the About Page Text Box */
+#about h2, .sub-page h2 {
+    color: white; /* Make text white */
+    font-size: 32px;
+}
+
+#about p, .sub-page p {
+    font-size: 18px;
+    color: white; /* White text for subpages */
+    line-height: 1.6;
+}
+
+/* Remove background image from subpages */
+.sub-page {
+    background-image: none !important; /* Ensures no background image */
+    background-color: #333; /* Set a solid dark background for subpages */
+    color: white; /* Set text color to white */
+    box-shadow: none; /* Optionally remove shadow for a flatter look */
+}
+
+/* Ensure no background image for subpages' content */
+.sub-page .content-box {
+    background-image: none !important; /* Remove background image from content boxes */
+    background-color: #ffffff; /* Ensure white background for readability */
+    color: #333; /* Standard text color for content */
+}
+
+/* Sub-Pages, including Contact, to ensure no background image */
+.sub-page, .sub-page h1, .sub-page p {
+    background-image: none !important; /* Ensures no background image */
+    color: white; /* Ensures text is white */
+}
+
+/* Additional Styling for Specific Sub-Pages (e.g., Contact) */
+.sub-page.contact-page {
+    max-width: 1000px;
+    padding: 40px;
+    margin: 20px auto;
+}
